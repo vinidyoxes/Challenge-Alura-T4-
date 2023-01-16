@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Decodificador</title>
+</head>
+
+<body>
+    <main>
+        <nav class="navigation">
+
+        </nav>
+
+        <div class="coluna1 ">
+            <textarea id="original" placeholder="Digite seu texto"></textarea>
+
+            <div class="botoes">
+                <button onclick="encrypt()" class="botao1">criptografar</button>
+
+                <button onclick="decrypt()" class="botao2">descriptografar</button>
+
+            </div>
+
+        </div>
+        <div class="coluna2">
+            <textarea id="encrypted" cols="30 " rows="10 " placeholder="Sem texto inserido ainda "></textarea>
+
+        </div>
+    </main>
+
+</body>
+
+</html>
+
+<script>
+    const encrypt = () => {
+        let original = document.getElementById("original").value.toLowerCase();
+        let encrypted = original.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufat");
+        document.getElementById("encrypted").value = encrypted;
+    }
+
+    const decrypt = () => {
+        let encrypted = document.getElementById("encrypted").value;
+        let decrypted = encrypted.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g, "u");
+        document.getElementById("encrypted").value = decrypted;
+    }
+</script>
