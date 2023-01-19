@@ -11,7 +11,7 @@ main {
     margin: auto;
     padding: 30px 30px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     margin: auto;
@@ -22,14 +22,32 @@ main {
     box-sizing: border-box;
 }
 
+nav {
+    display: inline-block;
+    width: auto;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+.colunas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 50px;
+}
+
 .coluna1 {
     margin: auto 0px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     text-align: center;
-    justify-content: center;
-    max-width: 50%;
+    justify-content: start;
+    max-width: 60%;
     padding: 0 15px;
     box-sizing: content-box;
 }
@@ -100,14 +118,13 @@ main {
 }
 
 .botoes {
-    width: 100%;
-    max-width: 100%;
+    width: auto;
     display: flex;
     flex-direction: row;
     gap: 15px;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: start;
+    align-items: flex-start;
 }
 
 .botao1 {
@@ -116,7 +133,7 @@ main {
     padding: 20px;
     background: #0A3871;
     border-radius: 24px;
-    width: 280px;
+    width: 240px;
     color: white;
     text-transform: capitalize;
     font-size: 16px;
@@ -131,7 +148,7 @@ main {
     padding: 20px;
     background: #D8DFE8;
     border-radius: 24px;
-    width: 280px;
+    width: 240px;
     color: #0A3871;
     text-transform: capitalize;
     font-size: 16px;
@@ -174,10 +191,17 @@ main {
 }
 
 #encrypted::placeholder {
-    position: relative;
+    position: absolute;
+    top: 70%;
     margin: auto 0;
     padding: auto 0;
     vertical-align: middle;
+    font-weight: bold;
+    color: #343A40;
+}
+
+#encrypted::placeholder::after {
+    color: red;
 }
 
 #encrypted:focus {

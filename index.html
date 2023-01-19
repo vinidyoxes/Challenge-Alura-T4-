@@ -12,28 +12,32 @@
 <body>
     <main>
         <nav class="navigation">
-
+            <img src="img/logo.png" alt="" class="logo">
         </nav>
 
-        <div class="coluna1 ">
-            <textarea id="original" placeholder="Digite seu texto"></textarea>
+        <div class="colunas">
+            <div class="coluna1 ">
 
-            <div class="info">
-                <span><img src="img/icon-exclamation.png" alt=""></span>
-                <p>Apenas letras minúsculas e sem acento.</p>
+                <textarea id="original" placeholder="Digite seu texto"></textarea>
+
+                <div class="info">
+                    <span><img src="img/icon-exclamation.png" alt=""></span>
+                    <p>Apenas letras minúsculas e sem acento.</p>
+                </div>
+                <div class="botoes">
+                    <button onclick="encrypt()" class="botao1">criptografar</button>
+
+                    <button onclick="decrypt()" class="botao2">descriptografar</button>
+
+                </div>
+
             </div>
-            <div class="botoes">
-                <button onclick="encrypt()" class="botao1">criptografar</button>
-
-                <button onclick="decrypt()" class="botao2">descriptografar</button>
+            <div class="coluna2">
+                <textarea id="encrypted" cols="30 " rows="10 " placeholder="Nenhuma mensagem encontrada"></textarea>
 
             </div>
-
         </div>
-        <div class="coluna2">
-            <textarea id="encrypted" cols="30 " rows="10 " placeholder="Sem texto inserido ainda "></textarea>
 
-        </div>
     </main>
 
 </body>
