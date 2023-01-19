@@ -52,4 +52,19 @@
         let decrypted = encrypted.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g, "u");
         document.getElementById("encrypted").value = decrypted;
     }
+
+
+    function verificaNull(e) {
+
+
+        if (document.getElementById("encrypted").value != "") {
+            document.getElementById('encrypted').style.backgroundImage = "none";
+        } else {
+            document.getElementById('encrypted').style.backgroundImage = "url('img/High\ quality\ products\ 1\ 1.png')";
+
+        }
+
+    }
+
+    setInterval(verificaNull, 200)
 </script>
